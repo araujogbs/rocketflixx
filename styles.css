@@ -1,113 +1,202 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
 
-body{
-    background-image: linear-gradient(50deg, #C12A23, #000000, #1E46A3);
-    background-size: 500% 100vh;
-    animation: backgroundmovement 5s infinite alternate ;
+  body {
+      background-image: linear-gradient(50deg, #C12A23, #000000, #1E46A3);
+      background-size: 500% 100vh;
+      animation: backgroundmovement 5s infinite alternate;
 
-}
+  }
 
-@keyframes backgroundmovement{
-    0%{
-        background-position-x: 40%;
+  @keyframes backgroundmovement {
+      0% {
+          background-position-x: 40%;
+      }
+
+      100% {
+          background-position-x: 60%;
+      }
+  }
+
+  .content {
+
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 12vh;
+      gap: 2.5vh;
+      animation: contentmovement 1.5s ease-in;
+  }
+
+  @keyframes contentmovement {
+      0% {
+          margin-top: 1vh;
+          opacity: 0%;
+      }
+
+      100% {
+          margin-top: 12vh;
+      }
+  }
+
+  #title {
+      font-size: 2vw;
+      font-family: Poppins;
+      font-weight: 600;
+      color: white;
+
+  }
+
+
+  #switchLogo {
+      width: 5vw;
+  }
+
+  #switchBtn {
+      font-size: 0.7vw;
+      width: 8vw;
+      height: 4vh;
+      border-radius: 2px;
+      font-family: Poppins;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5vw;
+  }
+
+  #switchBtn:hover{
+    opacity: 70%;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  #switchBtnimg {
+      width: 3vh;
+      align-items: center;
+  }
+
+  #instruction {
+      font-size: 0.8vw;
+      color: white;
+      font-family: Poppins;
+      width: 22vw;
+      text-align: center;
+  }
+
+  .result {
+      width: 40vw;
+      display: none;
+      gap: 2.5vw;
+  }
+
+  #poster {
+      width: 30vw;
+      height: 30vh;
+      border-radius: 3%;
+
+  }
+
+  .details {
+
+      color: white;
+      font-family: Poppins;
+      font-size: 1vw;
+  }
+
+
+  #description {
+      font-size: 0.8vw;
+
+  }
+
+  @media screen and (max-width: 720px) {
+
+      .content {
+
+          margin-top: 5vh;
+
+      }
+
+      #switchLogo {
+          width: 10vw;
+      }
+
+      #switchBtn {
+        width: 30vw;
+        font-size: 2vw;
+
     }
-    100%{
-        background-position-x:  60%; 
+  
+    #switchBtnimg {
+        width: 3vh;
     }
-}
+  
+    #instruction {
+        font-size: 2vw;
+        color: white;
+        font-family: Poppins;
+        width: 55vw;
+        text-align: center;
+    }
+  
 
-.content {
-    
+      #title {
+          font-size: 4vw;
+          font-family: Poppins;
+          font-weight: 600;
+          color: white;
 
- display: flex;
- justify-content: center;
- flex-direction: column;
- align-items: center;
- margin-top: 12vh;
- gap: 2.5vh;
- animation:  3s ease-in;
-}
+      }
 
-@keyframes contentmovement{
-    0%{
-        margin-top: 1vh;
-        opacity: 0%;
+      .result {
+          width: 60vw;
+          flex-direction: column;
+          gap: 2.5vw;
+          align-items: center;
+          text-align: center;
+      }
+
+
+
+
+      .details {
+
+          color: white;
+          font-family: Poppins;
+          font-size: 1vw;
+      }
+
+      #poster {
+          width: 30vw;
+          height: 30vh;
+
+      }
+
+      #description {
+          font-size: 2vw;
+          text-align: center;
+
+      }
+
+
+
+
+
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 800px) {
+    #poster{
+        width: 15vw;
+        height: 15vh;
     }
 
-    100%{
-        margin-top: 12vh;
+    #switchBtn {
+        width: 15vw;
+        font-size: 1vw;
+        height: 3vh;
+
     }
-}
-
-#title{
-    font-size: 2vw;
-    font-family: Poppins;
-    font-weight: 600;
-    color: white;
-
-}
-
-
-#switchLogo{
-    width: 5vw;
-}
-
-#switchBtn {
-    font-size: 0.7vw;
-    width: 8vw;
-    height: 4vh;
-    border-radius: 2px;
-    font-family: Poppins;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5vw;
-}
-
-#switchBtnimg{
-    width: 3vh;
-    align-items: center;
-}
-
-#instruction{
-    font-size: 0.8vw;
-    color: white;
-    font-family: Poppins;
-    width: 22vw;
-    text-align: center;
-}
-
-.result{
-    width: 40vw;
-    display: flex;
-    gap: 2.5vw;
-}
-#poster{
-    width: 10vw;
-    height: 30vh;
-    
-}
-
-.details{
-
-    color: white;
-    font-family: Poppins;
-    font-size: 1vw;
-}
-
-#filmtitle{
-    font-size: 1vw;
-    color: white;
-
-}
-
-#description{
-    font-size: 0.8vw;
-    
-}
-
-@media screen (max-width: 720px) {
-    
-}
+  }
